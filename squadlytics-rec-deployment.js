@@ -3,15 +3,15 @@ program = require('commander');
 axios = require('axios');
 
 const source = 'squadlytics-cli';
-let application_name, author_email, commit_hash, description, notification_url;
+let event, application_name, author_email, commit_hash, description, notification_url;
 
 program
-  .arguments('<event> <notification_url>')
+  .arguments('<notification_url>')
   .option('-a, --application <application>', 'Name of the application you are deploying')
   .option('-u, --user [email]', 'Optional email of the user associated with the deployment')
   .option('-c, --commit [commit]', 'Optional commit being deployed')
   .option('-d, --message [message]', 'Optional description of the deployment')
-  .action((event, notificationURL) => {
+  .action((notificationURL) => {
     application_name = program.application;
     author_email = program.user;
     commit_hash = program.commit;
