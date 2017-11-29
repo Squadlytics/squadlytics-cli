@@ -1,0 +1,23 @@
+{
+  "name": "squadlytics-cli",
+  "version": "0.0.1",
+  "description": "A command-line tool to send notifications to Squadlytics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squadlytics/squadlytics-cli.git"
+  },
+  "keywords": [
+    "squadlytics",
+    "cli"
+  ],
+  "author": "sten@squadlytics.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/squadlytics/squadlytics-cli/issues"
+  },
+  "homepage": "https://github.com/squadlytics/squadlytics-cli#readme"
+}
