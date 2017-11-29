@@ -16,6 +16,9 @@
   ],
   "author": "sten@squadlytics.com",
   "license": "MIT",
+  "bin": {
+    "squadlytics": "./index.js"
+  },
   "bugs": {
     "url": "https://github.com/squadlytics/squadlytics-cli/issues"
   },
