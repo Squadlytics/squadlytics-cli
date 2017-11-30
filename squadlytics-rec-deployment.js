@@ -2,15 +2,15 @@
 program = require('commander');
 axios = require('axios');
 
-const source = 'squadlytics-cli';
-let   event,
-      deployment_id,
-      application_name,
-      author_email,
-      status,
-      commit_hash,
-      description,
-      notification_url;
+var source = 'squadlytics-cli';
+var event,
+    deployment_id,
+    application_name,
+    author_email,
+    status,
+    commit_hash,
+    description,
+    notification_url;
 
 program
   .arguments('<notification_url>')
@@ -49,7 +49,7 @@ if (!deployment_id){
   process.exit(1);
 }
 
-const body = {
+var body = {
   source,
   application_name,
   deployment_id,
@@ -59,7 +59,7 @@ const body = {
   description
 };
 
-const headers = {
+var headers = {
   'Content-Type': 'application/json',
   'User-Agent': 'Squadlytics CLI',
   'X-Squadlytics-Event': 'deployment'
