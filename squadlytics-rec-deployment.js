@@ -17,14 +17,14 @@ program
   .option('-a, --application <application>', 'Name of the application you are deploying')
   .option('-i, --id <deployment_id>', 'Unique id for your deployment')
   .option('-u, --user [email]', 'Optional email of the user associated with the deployment')
-  .option('-s, --status [status]', 'Optional deployment status')
+  .option('-f, --failed', 'Optional, mark the deployment as failed')
   .option('-c, --commit [commit]', 'Optional commit being deployed')
   .option('-d, --message [message]', 'Optional description of the deployment')
   .action((notificationURL) => {
     application_name = program.application;
     deployment_id = program.id
     author_email = program.user;
-    status = program.status || 'SUCCESSFUL';
+    status = program.failed ? 'FAILED' : 'SUCCESSFUL';
     commit_hash = program.commit;
     description = program.message;
     notification_url = notificationURL;
